@@ -55,6 +55,7 @@
 
 
       <gravity>1</gravity>
+      <enable_wind>true</enable_wind>
       <velocity_decay/>
       <self_collide>0</self_collide>
 
