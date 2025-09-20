@@ -661,6 +661,29 @@
       <cmd_min>-2</cmd_min>
       <err_max>0.2</err_max>
     </plugin>
+
+    <!-- Fixed lift surface attached to base_link (no servo) -->
+    <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+      <!-- Parameters referenced from standard_vtol -->
+      <a0>0.05984281113</a0>
+      <cla>4.752798721</cla>
+      <cda>0.6417112299</cda>
+      <cma>0.0</cma>
+      <alpha_stall>0.3391428111</alpha_stall>
+      <cla_stall>-3.85</cla_stall>
+      <cda_stall>-0.9233984055</cda_stall>
+      <cma_stall>0</cma_stall>
+      <!-- Center of pressure relative to base_link -->
+      <cp>-0.05 0 0.05</cp>
+      <!-- Effective wing planform area (single surface) -->
+      <area>0.50</area>
+      <air_density>1.2041</air_density>
+      <!-- Surface orientation in base_link frame -->
+      <forward>1 0 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>base_link</link_name>
+      <!-- No control_joint_* specified: fixed lift surface -->
+    </plugin>
     <static>0</static>
   </model>
 </sdf>
